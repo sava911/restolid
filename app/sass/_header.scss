@@ -1,0 +1,406 @@
+.header {
+  position: absolute;
+  background-color: var(--dark);
+  color: var(--dark);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 7;
+
+  .logo {
+
+
+    // img {
+    //   width: 350px;
+    //   padding-top: 5px;
+    // }
+
+
+
+  }
+
+  &__top {
+    background-color: var(--wh);
+
+  }
+
+  &__top-inner {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__adress {
+    position: relative;
+
+    &::after {
+
+
+      content: "\e947";
+      top: 12px;
+      left: -40px;
+      font-size: 30px;
+
+    }
+
+    &::before {
+
+
+      content: "\e947";
+      top: 12px;
+      left: -40px;
+      font-size: 30px;
+
+    }
+
+  }
+
+  &__phone {
+    font-size: 20px;
+    font-weight: 700;
+
+
+  }
+
+  &__phone-icons {
+    display: none;
+    position: relative;
+    background: var(--red);
+
+    &::after {
+
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 5px;
+      font-size: 20px;
+      background-image: url(../images/icons/phone.svg );
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+
+    }
+  }
+
+  &__btn-inner {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    // min-width: 440px;
+    a {
+      margin-left: 10px;
+    }
+  }
+
+
+
+  &__btn {
+    padding: 0 20px;
+    height: 30px;
+  }
+
+  &__social,
+  &__burger {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+
+
+
+  }
+
+
+
+
+  &__lists {
+    display: flex;
+    justify-content: space-between;
+
+
+
+    li {
+      // display: inline-block;
+      // padding: 10px 0;
+      @extend %hover;
+
+
+
+    }
+
+    li~li {
+      margin-left: 25px;
+    }
+
+
+  }
+
+
+
+
+
+  &__burger-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+  }
+
+  &__burger {
+    display: none;
+  }
+
+}
+
+.whatsapp {
+  background: #25D366;
+  position: relative;
+
+  &::after {
+
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 5px;
+    font-size: 20px;
+    background-image: url(../images/icons/whatsapp.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+
+  }
+}
+
+.telegram {
+  background: #229ED9;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 5px;
+    font-size: 20px;
+    background-image: url(../images/icons/Telegram_Logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+
+
+
+  }
+
+}
+
+.header__lists ul {
+  display: none;
+  border-top: 3px solid var(--red);
+
+  padding: 5px;
+  background: var(--wh);
+  color: var(--dark);
+  position: absolute;
+  z-index: 6;
+  width: 310px;
+  left: 0px;
+  top: 42px;
+  border-radius: 5px;
+
+
+
+
+  li {
+    padding: 5px 10px;
+
+    &:hover {
+      color: var(--red);
+    }
+
+  }
+
+}
+
+.header__lists li:hover>ul {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 320;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__inner {
+    position: absolute;
+    width: 500px;
+
+    border: 1px solid var(--dark);
+    background: var(--wh);
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+
+
+  &__text {
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__form-input {
+    padding: 20px;
+    border: 1px solid var(--dark);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+
+  &__btn {
+    padding: 20px;
+    border: 1px solid var(--red);
+    color: var(--wh);
+    margin-bottom: 10px;
+  }
+}
+
+.close {
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+
+  }
+}
+
+// end modal
+.modal-menu {
+  background: rgba(0, 0, 0, .8);
+
+
+  display: none;
+  position: absolute;
+  color: var(--wh);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  font-size: 16px;
+
+
+  transition-duration: .5s;
+  z-index: 999;
+
+}
+
+.close_button {
+  width: 47px;
+  height: 30px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+
+}
+
+.close_button::after,
+.close_button::before {
+  content: "";
+  width: 41px;
+  height: 2px;
+  background-color: var(--wh);
+
+  transform-origin: left;
+  position: absolute;
+}
+
+.close_button::after {
+
+  transform: rotate(45deg);
+}
+
+.close_button::before {
+
+  transform: rotate(-45deg);
+  bottom: -1px;
+}
+
+.modal-menu__inner {
+
+  background-color: var(--dark);
+  width: 75%;
+  height: 100vh;
+  padding: 60px 10px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+// end modal-menu
+
+/* Кнопка вверх uPTop */
+.back-to-top {
+  background: var(--red);
+  color: var(--wh);
+  border-radius: 50%;
+  position: fixed;
+  bottom: -50px;
+  padding: 10px 12px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.3s all;
+  z-index: 10;
+}
+
+.back-to-top.active {
+  bottom: 50px;
+  transition: 0.3s all;
+}
+
+.activ {
+  display: block;
+}
