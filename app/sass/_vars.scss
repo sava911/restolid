@@ -8,8 +8,9 @@
 
   --wh: #fffffff9;
   --dark: #0c131f;
-  --red: rgb(20, 152, 49);
-  // --red: rgb(20, 152, 49);
+  --red: #dc2929;
+  // --red: rgb(20, 152, 49);++
+  --blu: #0abde3;
   // --gr: rgba(193, 193, 193, 0.8);
   --gr: #edefee;
   --grl: rgba(193, 193, 193, 0.4);
@@ -29,6 +30,10 @@
 //   --page-bg: #252526;
 //   --text-color: #fff;
 // }
+
+.pad {
+  padding: 50px 0;
+}
 
 .btn {
   background-color: var(--red);
@@ -54,14 +59,12 @@
 }
 
 %hover {
-
   transition: all 0.3s;
   position: relative;
   cursor: pointer;
 
   &:hover,
   &:focus {
-
 
 
     &::before {
@@ -103,3 +106,53 @@
 // .form-mobile {
 //   display: none;
 // }
+
+.footer__list a {
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.footer__list a:before {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  color: transparent;
+  content: '•';
+  text-shadow: 0 0 transparent;
+  font-size: 13pt;
+  -webkit-transition: text-shadow 0.3s, color 0.3s;
+  -moz-transition: text-shadow 0.3s, color 0.3s;
+  transition: text-shadow 0.3s, color 0.3s;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.footer__list a:hover:before,
+.footer__list a:focus:before {
+  color: #fff;
+  text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.footer__list a:hover,
+.footer__list a:focus {
+  color: #0abde3
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-block {
+  animation: rotate-animation 4s infinite linear;
+  display: inline-block;
+}

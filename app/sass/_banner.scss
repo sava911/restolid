@@ -1,0 +1,125 @@
+.banner {
+  padding-top: 100px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  &__info {
+
+    padding: 30px;
+    border-radius: 30px;
+    background-color: var(--grl);
+
+    &_title {
+
+
+      span {
+        background: var(--red);
+        border-radius: 35px;
+        padding: 0px 5px;
+      }
+    }
+
+    &_text {
+      font-size: 22px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/check.svg');
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 2px;
+        left: -3px;
+        font-size: 20px;
+      }
+    }
+
+    &_form {
+      padding-top: 20px;
+    }
+
+    &_input {
+      border-bottom: 1px solid #000;
+      margin-right: 10px;
+    }
+
+    &_btn {
+      padding: 5px 20px;
+    }
+
+    &_subtext {
+      padding-top: 10px;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+  }
+
+
+  &__foto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+
+    border-radius: 30px;
+    background-color: var(--grl);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    // color: var(--wh);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &:nth-child(1) {
+      background-position: -60px 0;
+    }
+
+    &:nth-child(3):hover,
+    &:nth-child(3):focus {
+      background: var(--blu);
+    }
+
+    &:nth-child(2):hover,
+    &:nth-child(2):focus {
+      background: var(--blu);
+    }
+
+
+
+    &_title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &_text {}
+  }
+}
+
+.pad {}
+
+.container {}
+
+.text {}
+
+.txt-rotate {}
+
+.btn {}
+
+.form {
+  &__label-text {}
+}
