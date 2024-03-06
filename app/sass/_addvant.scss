@@ -46,10 +46,18 @@
     &:focus {
       background: var(--blu);
       cursor: pointer;
+
+      &::after {
+        opacity: 0.7;
+        color: var(--dark);
+      }
     }
 
     &:nth-child(1) {
       margin-left: 30%;
+      background: var(--blu);
+
+
     }
 
     &:nth-child(2) {
