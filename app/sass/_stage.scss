@@ -1,0 +1,77 @@
+.stages {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__info {}
+
+  &__title {}
+
+  &__text {
+    max-width: 450px;
+    margin-bottom: 10px;
+  }
+
+  &__items {
+    counter-reset: num;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    padding-bottom: 1rem;
+    padding-left: 23px;
+
+    &::after {
+      counter-increment: num;
+      content: counter(num);
+      display: flex;
+      font-weight: 600;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      background: var(--red);
+      border-radius: 25px;
+      color: var(--wh);
+
+    }
+
+    &:before {
+      content: '';
+      border-right: 3px solid var(--red);
+      margin-right: 40px;
+      padding-bottom: 30px;
+      margin-bottom: -50px;
+      margin-top: 45px;
+      display: block;
+      position: relative;
+      height: auto;
+      background-color: transparent;
+      width: 1px;
+
+    }
+
+    &:last-child {
+      &:before {
+        border: none;
+      }
+    }
+  }
+
+  &__item-title {
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    padding: 10px 40px;
+    border-radius: 30px;
+  }
+}
