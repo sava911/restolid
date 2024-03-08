@@ -111,5 +111,11 @@ $(function () {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
   };
+  // questions__item
+  $(".questions__item-subtext").click(function () {
+    $(this).parent().find(".questions__item-text").slideToggle();
+    $(this).toggleClass("opened");
+    return false;
+  });
 
 })

@@ -1,0 +1,131 @@
+.price {
+  &__title {
+    text-align: center;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    min-height: 450px;
+    gap: 20px;
+  }
+
+  &__info {
+    // background: var(--gr);
+  }
+
+  &__info-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 30px;
+    background: var(--gr);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    border-radius: 30px;
+
+    &:nth-child(1) {
+      opacity: 0.8;
+
+      .btn {
+        background: var(--grl);
+        color: var(--dark);
+      }
+    }
+
+    &:nth-child(2) {
+      // background: #5f292b90;
+      border: 1px solid var(--red);
+    }
+
+    &:nth-child(3) {
+      background: #17a22ef9;
+      color: var(--wh);
+    }
+
+  }
+
+  &__item-title {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 24px;
+      padding-top: 5px;
+      display: block;
+
+    }
+  }
+
+  &__item-list {
+    text-align: center;
+    margin-bottom: 20px;
+
+    li {
+      font-weight: 500;
+      border-bottom: 1px solid var(--grl);
+      padding: 5px 0;
+
+
+      &:nth-child(1) {
+        border-top: 1px solid var(--grl);
+      }
+    }
+  }
+
+  &__item-text {
+    text-align: right;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  &__item-btn {
+    padding: 10px 0;
+    border-radius: 30px;
+  }
+
+  .questions {
+
+
+
+
+    &__item {
+      display: block;
+      position: relative;
+      vertical-align: top;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--grl);
+
+      &:nth-child(1) {
+        border-top: 1px solid var(--grl);
+      }
+
+    }
+
+    &__item-subtext {
+      font-weight: 600;
+      transition: all 3.3s;
+
+      &.opened .plus {
+        color: var(--red);
+        transform: rotate(45deg);
+      }
+    }
+
+    &__item-text {
+      padding-top: 10px;
+    }
+  }
+}
